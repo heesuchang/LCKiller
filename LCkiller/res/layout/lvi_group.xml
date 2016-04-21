@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dip"
+        android:layout_marginRight="4dip"
+        android:layout_marginTop="8dip"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical" 
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="22dip"
+            android:shadowColor="#999999"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="1"
+            android:singleLine="true"
+            android:textColor="#8E8D86"
+            android:textSize="19sp" />
+    </LinearLayout>
+
+     <TextView
+        android:id="@+id/child_count"
+        android:layout_width="23dip"
+        android:layout_height="23dip"
+        android:layout_marginRight="10dip"
+        android:textColor="#e44201"
+        android:textSize="13sp"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_horizontal"
+        android:background="@drawable/keepcount"/> 
+       
+       <TextView
+        android:id="@+id/file_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="13dip"
+        android:shadowColor="#999999"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1"
+        android:singleLine="true"
+        android:textColor="#282826"
+        android:textSize="12sp" />
+       
+    <ImageView
+        android:id="@+id/row_options_button"
+        android:layout_width="1dip"
+        android:layout_height="60dip"
+        android:layout_gravity="center_vertical"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/button_options"
+        android:gravity="center_vertical"
+        android:padding="0sp"
+        android:scaleType="centerCrop"
+        android:src="@android:color/transparent" />
+
+</LinearLayout>

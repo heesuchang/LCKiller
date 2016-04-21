@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * Copyright (c) 2007, Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); 
+ * you may not use this file except in compliance with the License. 
+ * You may obtain a copy of the License at 
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0 
+ *
+ * Unless required by applicable law or agreed to in writing, software 
+ * distributed under the License is distributed on an "AS IS" BASIS, 
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+ * See the License for the specific language governing permissions and 
+ * limitations under the License.
+ */
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <AbsoluteLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0px"
+        android:layout_weight="1" >
+
+        <ImageView
+            android:id="@+id/bkgnd"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/screen_02" />
+
+        <com.ringdroid.WaveformView
+            android:id="@+id/waveform"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <com.ringdroid.MarkerView
+            android:id="@+id/startmarker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/start_marker"
+            android:nextFocusDown="@+id/endmarker"
+            android:src="@drawable/marker_left" />
+
+        <com.ringdroid.MarkerView
+            android:id="@+id/endmarker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/end_marker"
+            android:nextFocusDown="@+id/info"
+            android:nextFocusUp="@+id/startmarker"
+            android:src="@drawable/marker_right" />
+    </AbsoluteLayout>
+
+<!--    <TextView
+        android:id="@+id/info"
+        style="@style/AudioFileInfoOverlayText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:nextFocusDown="@+id/play"
+        android:nextFocusUp="@+id/endmarker" />
+-->
+    <LinearLayout
+        style="@style/ToolbarBackground"
+        android:layout_width="fill_parent"
+        android:layout_height="90dip"
+        android:gravity="center" >
+
+        <ImageButton
+            android:id="@+id/rew"
+            android:layout_width="57dip"
+            android:layout_height="57dip"
+            android:layout_marginBottom="6dip"
+            android:layout_marginTop="6dip"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/rewind"
+            android:padding="0sp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pre_06" />
+
+        <ImageButton
+            android:id="@+id/play"
+            android:layout_width="57dip"
+            android:layout_height="57dip"
+            android:layout_marginBottom="6dip"
+            android:layout_marginTop="6dip"
+            android:layout_marginLeft="18dip"
+            android:layout_marginRight="18dip"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/play"
+            android:padding="0sp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/go_06" />
+
+        <ImageButton
+            android:id="@+id/ffwd"
+            android:layout_width="57dip"
+            android:layout_height="57dip"
+            android:layout_marginBottom="6dip"
+            android:layout_marginTop="6dip"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/ffwd"
+            android:padding="0sp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/next_06" />
+<!--  20150113
+        <ImageButton
+            android:id="@+id/save"
+            android:layout_width="72dip"
+            android:layout_height="35dip"
+            android:layout_marginBottom="6dip"
+            android:layout_marginTop="6dip"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/save_button"
+            android:padding="0sp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/keep02" />
+-->
+        <!--
+      <LinearLayout style="@style/VerticalDividerLeft" />
+      <LinearLayout style="@style/VerticalDividerRight" />
+
+
+      <ImageButton android:id="@+id/zoom_in"
+       android:layout_width="52dip"
+       android:layout_height="52dip"
+       android:layout_marginLeft="5dip"
+       android:layout_marginTop="9dip"
+       android:layout_marginBottom="8dip"
+       android:contentDescription="@string/zoom_in"
+       android:src="@drawable/button_zoom_in" />
+
+      <ImageButton android:id="@+id/zoom_out"
+       android:layout_width="52dip"
+       android:layout_height="52dip"
+       android:layout_marginTop="9dip"
+       android:layout_marginBottom="8dip"
+       android:contentDescription="@string/zoom_out"
+       android:src="@drawable/button_zoom_out" />
+        -->
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/HorizontalDividerTop" />
+
+    <LinearLayout style="@style/HorizontalDividerBottom" />
+
+    <LinearLayout
+        style="@style/ChooseContactBackground"
+        android:layout_width="fill_parent"
+        android:layout_height="200dip"
+        android:gravity="center_vertical" >
+
+        <ExpandableListView
+            android:id="@+id/expandableListView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:groupIndicator="@android:color/transparent" >
+        </ExpandableListView>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/ChooseContactBackground"
+        android:layout_width="fill_parent"
+        android:layout_height="60dip"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/scriptView"
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            android:background="@drawable/viewscript_02"
+            android:contentDescription="@string/script"
+            android:padding="0sp"
+            android:scaleType="centerCrop"
+            android:text="VIEW SCRIPT" />
+
+    </LinearLayout>
+
+</LinearLayout>
